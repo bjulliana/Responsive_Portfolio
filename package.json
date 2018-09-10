@@ -1,25 +1,29 @@
 {
-  "name": "responsive_portfolio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bjulliana/Responsive_Portfolio.git"
-  },
-  "author": "Julliana Bauer",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bjulliana/Responsive_Portfolio/issues"
-  },
-  "homepage": "https://github.com/bjulliana/Responsive_Portfolio#readme",
-  "devDependencies": {
-    "gulp": "^3.9.1"
-  },
-  "dependencies": {
-    "npm": "^6.4.1"
-  }
+	"name": "responsive_portfolio",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"gulp": "gulp"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bjulliana/Responsive_Portfolio.git"
+	},
+	"author": "Julliana Bauer",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/bjulliana/Responsive_Portfolio/issues"
+	},
+	"homepage": "https://github.com/bjulliana/Responsive_Portfolio#readme",
+	"devDependencies": {
+		"browser-sync": "^2.24.7",
+		"gulp": "^3.9.1",
+		"gulp-sass": "^4.0.1",
+		"gulp-sass-lint": "^1.4.0"
+	},
+	"dependencies": {
+		"npm": "^6.4.1"
+	}
 }

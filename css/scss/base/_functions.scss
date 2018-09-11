@@ -1,0 +1,54 @@
+@import 'layout';
+
+@function rem-calc($size) {
+    $rem-size: $size / 16;
+    @return #{$rem-size}rem;
+}
+
+$breakpoints-map: map-keys($breakpoints);
+
+@mixin grid-column-classes($columns: 12) {
+    @each $breakpoint in $breakpoints-map {
+        @for $i from 1 through $columns {
+            @include breakpoint($breakpoint) {
+                .column-#{$breakpoint}-#{$i} {
+                    flex: 0 0 auto;
+                    min-width: 0;
+                    width: percentage($i / $columns);
+                }
+            }
+        }
+    }
+}
+
+@mixin breakpoint($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) and $breakpoint != small {
+        @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    } @else if map-has-key($breakpoints, $breakpoint) and $breakpoint == small {
+        @content;
+    } @else {
+        @warn "No value could be retrieved from `#{$breakpoint}`. "
+    }
+}
+
+@each $breakpoint, $values in $breakpoints {
+    .show-for-#{$breakpoint} {
+
+        @if $breakpoint == 'small' {
+            display: block;
+
+            @include breakpoint('medium') {
+                display: none;
+            }
+
+        } @else {
+            display: none;
+
+            @include breakpoint($breakpoint) {
+                display: block;
+            }
+        }
+    }
+}

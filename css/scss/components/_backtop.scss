@@ -1,0 +1,49 @@
+.back-top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 600;
+    display: none;
+    cursor: pointer;
+    opacity: 0;
+
+    a {
+        text-decoration: none;
+        border: 0;
+        height: rem-calc(70);
+        width: rem-calc(70);
+        line-height: rem-calc(66);
+        text-align: center;
+        background: $accent-1;
+        color: $white;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.3s ease-in-out;
+
+        @include breakpoint(medium) {
+            display: block;
+        }
+
+        &:hover i {
+            color: $black;
+        }
+
+        i {
+            font-size: rem-calc(16);
+            line-height: inherit;
+        }
+    }
+
+    &.visible {
+        @include breakpoint(medium) {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out 1 forwards;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

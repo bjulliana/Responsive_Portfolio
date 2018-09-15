@@ -1,0 +1,46 @@
+button,
+.button,
+a.button,
+input[type='submit'],
+input[type='button'] {
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+    margin: rem-calc(0 3 12 0);
+    border: 0;
+    background: $grey-300;
+    cursor: pointer;
+    padding: rem-calc(0 30);
+    height: rem-calc(54);
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: rem-calc(54);
+    letter-spacing: rem-calc(3);
+    white-space: nowrap;
+    color: $grey-900;
+    font-family: $primary-font;
+    font-size: rem-calc(14);
+    font-weight: 700;
+
+    &:hover,
+    &:focus {
+        background: $grey-300;
+        color: $grey-900;
+    }
+
+    .button-primary {
+        background: $grey-900;
+        color: $white;
+
+        &:hover,
+        &:focus {
+            background: $grey-900;
+        }
+    }
+
+    &.stroke {
+        border: 3px solid $grey-700;
+        background: transparent !important;
+        line-height: rem-calc(48);
+    }
+}

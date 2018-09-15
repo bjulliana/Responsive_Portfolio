@@ -1,0 +1,26 @@
+fieldset {
+    border: 0;
+}
+
+input[type='email'],
+input[type='number'],
+input[type='search'],
+input[type='text'],
+input[type='tel'],
+input[type='url'],
+input[type='password'],
+textarea,
+select {
+    display: block;
+    transition: 0.3s ease-in-out;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid rgba($black, 0.3);
+    background: transparent;
+    padding: rem-calc(15 0);
+    max-width: 100%;
+    vertical-align: middle;
+    color: $grey-700;
+    font-family: 'Montserrat', sans-serif;
+    font-size: rem-calc(15);
+}

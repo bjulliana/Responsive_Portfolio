@@ -4,7 +4,7 @@ footer {
     padding-top: rem-calc(15);
     padding-bottom: rem-calc(15);
     text-align: center;
-    font-family: 'Montserrat;', sans-serif;
+    font-family: $primary-font;
     font-size: rem-calc(14);
 
     @include breakpoint(medium) {
@@ -34,8 +34,7 @@ footer {
     .footer-social {
         display: block;
         position: relative;
-        top: rem-calc(-3);
-        margin-bottom: rem-calc(15);
+        margin: 0;
         padding: 0;
         width: 100%;
         text-align: center;
@@ -52,8 +51,8 @@ footer {
             padding: 0;
 
             a {
-                color: $grey-300;
                 transition: 0.2s ease-in-out;
+                color: $grey-300;
 
                 &:hover {
                     color: $accent-1;
@@ -67,8 +66,9 @@ footer {
     }
 
     .copyright {
-        span {
+        p {
             display: block;
+            margin: rem-calc(5 0);
             color: $grey-300;
 
             @include breakpoint(medium) {

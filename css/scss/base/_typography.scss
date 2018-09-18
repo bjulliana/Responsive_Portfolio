@@ -13,7 +13,7 @@ h6,
     margin-bottom: rem-calc(21);
     text-rendering: optimizeLegibility;
     color: $grey-700;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $primary-font;
     font-weight: 500;
     font-style: normal;
 }
@@ -88,7 +88,7 @@ p.lead {
     margin-bottom: rem-calc(36);
     line-height: 1.8;
     color: $grey-500;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $primary-font;
     font-size: rem-calc(18);
 }
 
@@ -110,13 +110,13 @@ b {
 
 em,
 i {
-    font-family: 'Libre Baskerville', serif;
+    font-family: $secondary-font;
     font-style: italic;
 }
 
 strong,
 b {
-    font-family: 'Libre Baskerville', serif;
+    font-family: $secondary-font;
     font-weight: 700;
 }
 

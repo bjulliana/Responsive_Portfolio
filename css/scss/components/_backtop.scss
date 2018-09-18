@@ -1,24 +1,22 @@
 .back-top {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    z-index: 600;
     display: none;
-    cursor: pointer;
+    position: fixed;
+    right: 0;
+    bottom: 0;
     opacity: 0;
+    z-index: 600;
+    cursor: pointer;
 
     a {
-        text-decoration: none;
-        border: 0;
-        height: rem-calc(70);
-        width: rem-calc(70);
-        line-height: rem-calc(66);
-        text-align: center;
+        transition: 0.3s ease-in-out;
         background: $accent-1;
-        color: $white;
+        width: rem-calc(70);
+        height: rem-calc(70);
         text-align: center;
         text-transform: uppercase;
-        transition: 0.3s ease-in-out;
+        text-decoration: none;
+        line-height: rem-calc(66);
+        color: $white;
 
         @include breakpoint(medium) {
             display: block;
@@ -29,8 +27,8 @@
         }
 
         i {
-            font-size: rem-calc(16);
             line-height: inherit;
+            font-size: rem-calc(16);
         }
     }
 

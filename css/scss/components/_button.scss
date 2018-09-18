@@ -9,7 +9,7 @@ input[type='button'] {
     border: 0;
     background: $grey-300;
     cursor: pointer;
-    padding: rem-calc(0 30);
+    padding: rem-calc(0 18);
     height: rem-calc(54);
     text-align: center;
     text-transform: uppercase;
@@ -22,25 +22,42 @@ input[type='button'] {
     font-size: rem-calc(14);
     font-weight: 700;
 
-    &:hover,
-    &:focus {
-        background: $grey-300;
-        color: $grey-900;
+    @include breakpoint(large) {
+        padding: rem-calc(0 30);
     }
 
-    .button-primary {
-        background: $grey-900;
+    &.stroke {
+        border: 3px solid $white;
+        background: transparent;
+        line-height: rem-calc(48);
         color: $white;
 
         &:hover,
         &:focus {
-            background: $grey-900;
+            border-color: $accent-1;
+            background-color: $accent-1;
         }
     }
+}
 
-    &.stroke {
-        border: 3px solid $grey-700;
-        background: transparent !important;
-        line-height: rem-calc(48);
+
+.submit-button {
+    display: block;
+    margin-top: rem-calc(48);
+    border: 3px solid $accent-1;
+    background: $accent-1;
+    padding: rem-calc(0 30);
+    width: 100%;
+    height: rem-calc(66);
+    line-height: rem-calc(50);
+    letter-spacing: rem-calc(2);
+    color: $white;
+    font-size: rem-calc(15);
+
+    &:hover,
+    &:focus {
+        border-color: $white;
+        background: $white;
+        color: $accent-1;
     }
 }

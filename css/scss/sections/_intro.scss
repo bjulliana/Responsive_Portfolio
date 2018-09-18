@@ -8,8 +8,12 @@
         margin-top: 0;
         line-height: 1.375;
         color: $white;
-        font-family: 'Libre Baskerville', serif;
-        font-size: rem-calc(48);
+        font-family: $secondary-font;
+        font-size: rem-calc(34);
+
+        @include breakpoint(large) {
+            font-size: rem-calc(48);
+        }
     }
 
     .section-intro-top {
@@ -18,15 +22,34 @@
         line-height: 1.667;
         letter-spacing: rem-calc(3);
         color: $accent-1;
-        font-family: 'Montserrat', sans-serif;
+        font-family: $primary-font;
         font-size: rem-calc(18);
         font-weight: 700;
     }
 
     .lead {
         line-height: 1.833;
-        font-family: 'Montserrat', sans-serif;
-        font-size: rem-calc(20);
+        font-family: $primary-font;
+        font-size: rem-calc(16);
         font-weight: 300;
+
+        @include breakpoint(large) {
+            font-size: rem-calc(20);
+        }
+    }
+}
+
+.intro-heading-small {
+    position: relative;
+    text-transform: uppercase;
+    line-height: 1.667;
+    letter-spacing: rem-calc(3);
+    color: $accent-1;
+    font-family: $primary-font;
+    font-size: rem-calc(15);
+    font-weight: 700;
+
+    @include breakpoint(xlarge) {
+        font-size: rem-calc(18);
     }
 }

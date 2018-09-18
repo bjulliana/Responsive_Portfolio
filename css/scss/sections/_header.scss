@@ -1,11 +1,7 @@
 
-header {
+.header {
     position: absolute;
-    top: 0;
-    left: 0;
     z-index: 700;
-    width: 100%;
-    height: auto;
 
     .row {
         position: relative;
@@ -16,59 +12,52 @@ header {
 
 .header-logo {
     position: absolute;
-    transition: 1s ease-in-out;
     margin-top: rem-calc(30);
     margin-left: rem-calc(45);
 
     a {
         display: block;
-        transition: 0.5s ease-in-out;
-        margin: 0;
-        border: 0;
-        padding: 0;
-        width: 51px;
-        height: 24px;
-        text-shadow: none;
-        color: transparent;
 
-        @include breakpoint(medium) {
+        @include breakpoint(large) {
             width: 120px;
             height: auto;
         }
     }
 }
 
-#header-menu-trigger {
+.menu-trigger {
     display: block;
     position: fixed;
     right: 45px;
     transition: 0.3s ease-in-out;
-    margin-top: rem-calc(45);
+    margin-top: rem-calc(25);
     background-color: $grey-900;
+    cursor: pointer;
     width: 42px;
     height: 42px;
     text-transform: uppercase;
     line-height: 42px;
     letter-spacing: rem-calc(2);
     color: rgba($white, 0.5);
-    font-family: 'Montserrat', sans-serif;
+    font-family: $primary-font;
     font-size: rem-calc(14);
-    cursor: pointer;
 
+    @include breakpoint(large) {
+        margin-top: rem-calc(45);
+    }
 
     &:hover,
     &:focus {
         background-color: $accent-1;
 
-        .header-menu-text {
+        .menu-trigger-text {
             background-color: $accent-1;
         }
     }
 
-    .header-menu-text {
+    .menu-trigger-text {
         display: none;
         position: absolute;
-        top: 0;
         left: -75px;
         transition: 0.3s ease-in-out;
         background-color: $grey-900;
@@ -76,14 +65,14 @@ header {
         text-align: center;
         color: $white;
 
-        @include breakpoint(medium) {
+        @include breakpoint(large) {
             display: block;
         }
     }
 
 }
 
-.header-menu-icon {
+.menu-trigger-icon {
     display: block;
     position: absolute;
     top: 50%;
@@ -96,7 +85,6 @@ header {
     &::before,
     &::after {
         position: absolute;
-        left: 0;
         background-color: inherit;
         width: 100%;
         height: 100%;
@@ -113,22 +101,24 @@ header {
 }
 
 .header-nav {
-    z-index: 600;
-    font-size: rem-calc(16);
-    line-height: 1.875;
-    padding: rem-calc(36 30 36 60);
-    height: 100%;
-    width: 50%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translate3d(100%, 0, 0);
+    transition: 0.5s cubic-bezier(0.7, 0.3, 0, 1);
+    visibility: hidden;
     background: $black;
+    padding: rem-calc(36 30 36 50);
+    width: 100%;
+    height: 100%;
     color: rgba($white, 0.25);
     overflow-y: auto;
     overflow-x: hidden;
-    position: fixed;
-    right: 0;
-    top: 0;
-    transition: 0.5s cubic-bezier(0.7, 0.3, 0, 1);
-    transform: translate3d(100%, 0, 0);
-    visibility: hidden;
+
+    @include breakpoint(large) {
+        padding: rem-calc(36 30 36 60);
+        width: 50%;
+    }
 
     a,
     &:visited,
@@ -138,32 +128,36 @@ header {
         color: $white;
     }
 
-    .nav-heading {
+    .header-nav-title {
         display: inline-block;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 700;
-        font-size: 12px;
-        line-height: 1.25;
-        text-transform: uppercase;
-        letter-spacing: rem-calc(4);
-        margin-bottom: rem-calc(72);
-        margin-top: rem-calc(12);
-        padding-right: 140px;
-        color: $accent-1;
         position: relative;
         left: 100px;
-        opacity: 0;
         visibility: hidden;
+        opacity: 0;
+        margin-bottom: rem-calc(72);
+        padding-right: rem-calc(100);
+        text-transform: uppercase;
+        letter-spacing: rem-calc(4);
+        color: $accent-1;
+        font-size: rem-calc(12);
+
+        @include breakpoint(large) {
+            padding-right: rem-calc(140);
+        }
 
         &::after {
             display: block;
-            height: 1px;
-            width: 110px;
-            background-color: $accent-1;
             position: absolute;
             top: 50%;
-            right: 0;
+            right: 30px;
+            background-color: $accent-1;
+            width: 50px;
+            height: 1px;
             content: '';
+
+            @include breakpoint(large) {
+                width: 100px;
+            }
         }
     }
 
@@ -171,32 +165,28 @@ header {
         margin-bottom: rem-calc(27);
     }
 
-    .header-nav__content {
-        left: 100px;
-        opacity: 0;
-        visibility: hidden;
+    .header-nav-content {
         position: relative;
-        max-width: 300px;
+        left: 100px;
+        visibility: hidden;
+        opacity: 0;
     }
 
-    .header-nav__list {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 600;
-        font-size: rem-calc(28);
-        line-height: 1.286;
+    .header-nav-items {
         margin: rem-calc(0 0 42 0);
         padding: 0;
         list-style: none;
-        counter-reset: ctr;
+        line-height: 1.286;
+        font-family: $primary-font;
+        font-size: rem-calc(28);
+        font-weight: 600;
+        counter-reset: increment;
 
         li {
             padding: rem-calc(9 0);
         }
 
         a {
-            display: block;
-            color: $white;
-            position: relative;
 
             &:hover {
                 &::before {
@@ -206,13 +196,13 @@ header {
 
             &::before {
                 display: block;
-                content: counter(ctr, decimal-leading-zero) ".";
-                counter-increment: ctr;
-                font-family: "Montserrat", sans-serif;
-                font-size: 11px;
-                color: rgba($white, 0.25);
-                transition: all 0.5s ease-in-out;
                 position: relative;
+                transition: 0.5s ease-in-out;
+                color: rgba($white, 0.25);
+                font-family: $primary-font;
+                font-size: 11px;
+                content: counter(increment, decimal-leading-zero) '.';
+                counter-increment: increment;
             }
         }
     }
@@ -221,12 +211,10 @@ header {
         color: $accent-1;
     }
 
-    .header-nav__social {
-        list-style: none;
-        display: inline-block;
-        font-size: rem-calc(24);
-        margin: 0;
+    .header-nav-social {
         padding: 0;
+        list-style: none;
+        font-size: rem-calc(24);
 
         li {
             display: inline-block;
@@ -234,11 +222,12 @@ header {
             padding-left: 0;
 
             a {
+                transition: 0.2s ease-in-out;
                 color: rgba($white, 0.15);
 
                 &:hover,
                 &:focus {
-                    color: $white;
+                    color: $accent-1;
                 }
 
                 i {
@@ -252,61 +241,51 @@ header {
         }
     }
 
-    .header-nav__close {
-        z-index: 601;
-        display: block;
-        height: 30px;
-        width: 30px;
+    .header-nav-close {
         position: absolute;
-        top: 39px;
         right: 30px;
-        text-shadow: none;
         color: transparent;
 
         span::before,
         span::after {
-            content: "";
             display: block;
-            height: 2px;
-            width: 16px;
-            background-color: $white;
             position: absolute;
             top: 50%;
-            left: 7px;
+            left: 15px;
             margin-top: -1px;
+            background-color: $white;
+            width: 22px;
+            height: 2px;
+            content: '';
+
+            @include breakpoint(large) {
+                width: 35px;
+            }
         }
 
         span::before {
-            -webkit-transform: rotate(-45deg);
-            -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
         }
 
         span::after {
-            -webkit-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
             transform: rotate(45deg);
         }
 
     }
 }
 
-
 .menu-is-open {
     .header-nav {
         transform: translate3d(0, 0, 0);
         visibility: visible;
-        -webkit-overflow-scrolling: touch;
     }
 
-    .header-nav__content,
-    .header-nav .nav-heading {
-        opacity: 1;
-        visibility: visible;
-        transition-property: all;
-        transition-duration: 1s;
-        transition-timing-function: ease-in-out;
-        transition-delay: 0.5s;
+    .header-nav-content,
+    .header-nav .header-nav-title {
         left: 0;
+        transition: 1s ease-in-out;
+        visibility: visible;
+        opacity: 1;
+        transition-delay: 0.5s;
     }
 }

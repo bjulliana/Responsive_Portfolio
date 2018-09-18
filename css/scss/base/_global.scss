@@ -18,7 +18,7 @@ body {
     text-rendering: optimizeLegibility;
     line-height: rem-calc(30);
     color: $grey-700;
-    font-family: 'Libre Baskerville', serif;
+    font-family: $secondary-font;
     font-size: rem-calc(16);
     font-weight: 200;
     -webkit-font-smoothing: antialiased;

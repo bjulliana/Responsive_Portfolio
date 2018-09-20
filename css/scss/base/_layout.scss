@@ -97,3 +97,11 @@ $spacing-map: (
     padding-left: rem-calc(20);
     max-width: rem-calc(1600);
 }
+
+.hide-for-small.hide-for-small {
+    display: none;
+    
+    @include breakpoint(medium) {
+        display: inherit;
+    }
+}

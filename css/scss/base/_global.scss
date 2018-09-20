@@ -13,7 +13,7 @@ html {
 
 body {
     margin: 0;
-    background-color: $offwhite;
+    background-color: $off-white;
     padding: 0;
     text-rendering: optimizeLegibility;
     line-height: rem-calc(30);
@@ -22,11 +22,9 @@ body {
     font-size: rem-calc(16);
     font-weight: 200;
     -webkit-font-smoothing: antialiased;
-
 }
 
 footer,
-header,
 main,
 menu,
 nav,

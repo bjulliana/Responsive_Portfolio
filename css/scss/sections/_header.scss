@@ -1,5 +1,6 @@
 
 .header {
+    display: flex;
     position: absolute;
     z-index: 700;
 
@@ -7,21 +8,6 @@
         position: relative;
         max-width: 1300px;
         height: auto;
-    }
-}
-
-.header-logo {
-    position: absolute;
-    margin-top: rem-calc(30);
-    margin-left: rem-calc(45);
-
-    a {
-        display: block;
-
-        @include breakpoint(large) {
-            width: 120px;
-            height: auto;
-        }
     }
 }
 
@@ -122,43 +108,10 @@
 
     a,
     &:visited,
-    &hover,
+    &:hover,
     &:focus,
     &:active {
         color: $white;
-    }
-
-    .header-nav-title {
-        display: inline-block;
-        position: relative;
-        left: 100px;
-        visibility: hidden;
-        opacity: 0;
-        margin-bottom: rem-calc(72);
-        padding-right: rem-calc(100);
-        text-transform: uppercase;
-        letter-spacing: rem-calc(4);
-        color: $accent-1;
-        font-size: rem-calc(12);
-
-        @include breakpoint(large) {
-            padding-right: rem-calc(140);
-        }
-
-        &::after {
-            display: block;
-            position: absolute;
-            top: 50%;
-            right: 30px;
-            background-color: $accent-1;
-            width: 50px;
-            height: 1px;
-            content: '';
-
-            @include breakpoint(large) {
-                width: 100px;
-            }
-        }
     }
 
     p {
@@ -173,7 +126,7 @@
     }
 
     .header-nav-items {
-        margin: rem-calc(0 0 42 0);
+        margin: rem-calc(100 0 42 0);
         padding: 0;
         list-style: none;
         line-height: 1.286;
@@ -187,10 +140,16 @@
         }
 
         a {
+            display: inline-block;
 
             &:hover {
                 &::before {
                     color: $accent-1;
+                }
+
+                &::after {
+                    background: $accent-1;
+                    width: 110%;
                 }
             }
 
@@ -203,6 +162,16 @@
                 font-size: 11px;
                 content: counter(increment, decimal-leading-zero) '.';
                 counter-increment: increment;
+            }
+
+            &::after {
+                display: block;
+                top: 0;
+                transition: 0.5s ease-in-out;
+                margin-top: -12px;
+                width: 0;
+                height: 8px;
+                content: '';
             }
         }
     }
@@ -230,7 +199,7 @@
                     color: $accent-1;
                 }
 
-                i {
+                .icon {
                     font-size: rem-calc(20);
                 }
             }
@@ -280,8 +249,7 @@
         visibility: visible;
     }
 
-    .header-nav-content,
-    .header-nav .header-nav-title {
+    .header-nav-content {
         left: 0;
         transition: 1s ease-in-out;
         visibility: visible;

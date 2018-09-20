@@ -22,11 +22,11 @@
             display: block;
         }
 
-        &:hover i {
+        &:hover .icon {
             color: $black;
         }
 
-        i {
+        .icon {
             line-height: inherit;
             font-size: rem-calc(16);
         }

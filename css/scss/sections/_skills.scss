@@ -37,15 +37,13 @@
         .icon {
             display: inline-block;
             margin-bottom: rem-calc(15);
+            color: $accent-2;
+            font-size: rem-calc(50);
 
-            i {
-                color: $accent-2;
-                font-size: rem-calc(50);
-
-                @include breakpoint(medium) {
-                    font-size: rem-calc(54);
-                }
+            @include breakpoint(medium) {
+                font-size: rem-calc(54);
             }
+
         }
 
         .h5 {

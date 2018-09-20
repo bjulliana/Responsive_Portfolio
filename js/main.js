@@ -2,7 +2,6 @@ let mobileIcon      = document.querySelector('.menu-trigger'),
     mobileMenuClose = document.querySelector('.header-nav-close'),
     inputArea       = document.querySelectorAll('.input-field'),
     menuItem        = document.querySelectorAll('.menu-link'),
-    body            = document.querySelector('body'),
     btButton        = document.querySelector('.back-top'),
     animatedObject  = document.querySelectorAll('.js-animation'),
     windowHeight    = window.innerHeight;

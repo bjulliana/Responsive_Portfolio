@@ -6,7 +6,8 @@ let body            = document.body,
 
 function showLightbox(src) {
     body.classList.add('js-lightbox-active');
-    lightboxContent.innerHTML += '<img src="' + src + '" />';
+    lightboxContent.innerHTML = `<img src="${src}"/>`;
+
 }
 
 function exitLightbox() {
@@ -20,7 +21,7 @@ lightbox.addEventListener('click', function (e) {
     }
 });
 document.addEventListener('keyup', function (e) {
-    if ((e.keyCode === 27) && (body.classList.contains('js-lightbox-active'))) {
+    if ((e.keyCode === 27) || (e.key === 'Escape') || (e.code === 'Escape') && (body.classList.contains('js-lightbox-active'))) {
         exitLightbox();
     }
 });

@@ -1,13 +1,18 @@
 // Include gulp
-let gulp        = require('gulp'),
-    sass        = require('gulp-sass'),
-    browserSync = require('browser-sync').create(),
-    sassLint    = require('gulp-sass-lint');
+let gulp         = require('gulp'),
+    sass         = require('gulp-sass'),
+    browserSync  = require('browser-sync').create(),
+    sassLint     = require('gulp-sass-lint'),
+    autoprefixer = require('gulp-autoprefixer');
 
 // Compile Sass
 gulp.task('sass', function () {
     return gulp.src('css/scss/**/*.scss')
                .pipe(sass().on('error', sass.logError))
+               .pipe(autoprefixer({
+                   browsers: ['last 2 versions'],
+                   cascade : false
+               }))
                .pipe(gulp.dest('css'))
                .pipe(browserSync.reload({
                    stream: true

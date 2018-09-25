@@ -17,8 +17,8 @@
     }
 
     .bricks-wrapper {
-        column-count: 1;
         column-gap: 0;
+        column-count: 1;
 
         @include breakpoint(medium) {
             column-count: 2;

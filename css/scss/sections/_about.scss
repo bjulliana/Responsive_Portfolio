@@ -1,0 +1,47 @@
+.about {
+    position: relative;
+    background-color: $white;
+    padding: rem-calc(96 0);
+    min-height: auto;
+    text-align: center;
+
+    @include breakpoint(large) {
+        min-height: 636px;
+    }
+
+    @include breakpoint(xlarge) {
+        padding: rem-calc(120 0);
+        min-height: 696px;
+    }
+
+    span {
+        color: $accent-1;
+    }
+
+    .lead {
+        margin-top: rem-calc(30);
+        line-height: 1.8;
+        color: $grey-500;
+        font-family: $secondary-font;
+        font-size: rem-calc(25);
+        font-weight: 700;
+
+        @include breakpoint(medium) {
+            font-size: rem-calc(28);
+        }
+
+        @include breakpoint(large) {
+            font-size: rem-calc(36);
+        }
+
+        @include breakpoint(xlarge) {
+            margin-top: rem-calc(40);
+            font-size: rem-calc(40);
+        }
+    }
+
+    p {
+        line-height: 2;
+        font-size: rem-calc(20);
+    }
+}

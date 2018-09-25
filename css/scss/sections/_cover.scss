@@ -1,0 +1,138 @@
+.home {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background: $grey-900 url('#{$img-path}/hero-bg.jpg') no-repeat fixed center 30%;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    min-height: 550px;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    min-width: 100vw;
+    height: 100vh;
+    min-height: 100%;
+    text-align: center;
+}
+
+.home-content-inner {
+    .home-content-top {
+        margin: rem-calc(0 0 10 0);
+        text-transform: uppercase;
+        letter-spacing: rem-calc(3);
+        color: $white;
+        font-family: $primary-font;
+        font-size: rem-calc(15);
+        font-weight: 700;
+
+        @include breakpoint(large) {
+            font-size: rem-calc(22);
+        }
+    }
+}
+
+.home-content-title {
+    margin: rem-calc(15 0 30);
+    line-height: 1.133;
+    color: $white;
+    font-family: $secondary-font;
+    font-size: rem-calc(32);
+    font-weight: bold;
+
+    @include breakpoint(medium) {
+        margin: rem-calc(30 0);
+        font-size: rem-calc(40);
+    }
+
+    @include breakpoint(large) {
+        margin: rem-calc(10 0 40 0);
+        line-height: rem-calc(80);
+        font-size: rem-calc(60);
+    }
+}
+
+.home-social-list {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 45px;
+    margin-top: rem-calc(40);
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    line-height: 1.75;
+    font-size: rem-calc(24);
+
+    @include breakpoint(medium) {
+        display: block;
+    }
+
+    li {
+        margin-right: rem-calc(15);
+        margin-bottom: rem-calc(8);
+        padding-left: 0;
+
+        @include breakpoint(medium) {
+            margin-right: 0;
+        }
+
+        a {
+            transition: 0.2s ease-in-out;
+            color: $white;
+
+            &:visited {
+                color: $white;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $accent-1;
+            }
+
+            .icon {
+                font-size: rem-calc(24);
+            }
+        }
+    }
+}
+
+.scrolldown {
+    position: absolute;
+    bottom: 0;
+    align-self: center;
+    margin-bottom: rem-calc(30);
+
+    @include breakpoint(medium) {
+        right: 45px;
+        transform: rotate(90deg);
+        margin-bottom: 0;
+        transform-origin: right top 0;
+    }
+
+    .scroll {
+        display: inline-block;
+        position: relative;
+        transition: 0.2s ease-in-out;
+        background: transparent;
+        text-transform: uppercase;
+        letter-spacing: rem-calc(3);
+        color: $white;
+        font-family: $primary-font;
+        font-size: rem-calc(14);
+        font-weight: 700;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $accent-1;
+        }
+
+        .icon {
+            padding-left: rem-calc(9);
+        }
+    }
+}

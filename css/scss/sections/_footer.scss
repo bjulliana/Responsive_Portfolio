@@ -1,0 +1,94 @@
+footer {
+    border-top: 1px solid $grey-500;
+    background-color: $grey-900;
+    padding-top: rem-calc(15);
+    padding-bottom: rem-calc(15);
+    text-align: center;
+    font-family: $primary-font;
+    font-size: rem-calc(14);
+
+    @include breakpoint(medium) {
+        padding-top: rem-calc(30);
+        padding-bottom: rem-calc(30);
+        text-align: left;
+    }
+
+    a,
+    &:visited {
+        color: $white;
+
+        &:hover,
+        &:focus {
+            color: $accent-1;
+        }
+    }
+
+    .row {
+        max-width: 900px;
+    }
+
+    .social {
+        text-align: right;
+    }
+
+    .footer-social {
+        display: block;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        font-size: rem-calc(21);
+
+        @include breakpoint(medium) {
+            display: inline-block;
+            margin: 0;
+        }
+
+        li {
+            display: inline-block;
+            margin: rem-calc(0 12);
+            padding: 0;
+
+            a {
+                transition: 0.2s ease-in-out;
+                color: $grey-300;
+
+                &:hover {
+                    color: $accent-1;
+                }
+
+                .icon {
+                    font-size: rem-calc(20);
+                }
+            }
+        }
+    }
+
+    .copyright {
+        p {
+            display: block;
+            margin: rem-calc(5 0);
+            color: $grey-300;
+
+            @include breakpoint(medium) {
+                display: inline-block;
+            }
+
+            &::after {
+                display: none;
+
+                @include breakpoint(medium) {
+                    display: inline-block;
+                    padding: rem-calc(0 10 0 12);
+                    color: $grey-300;
+                    content: '|';
+                }
+            }
+
+            &:last-child::after {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+.skills {
+    position: relative;
+    background-color: $grey-900;
+    padding: rem-calc(80 0);
+    min-height: 800px;
+    color: rgba($white, 0.3);
+
+    @include breakpoint(large) {
+        padding: rem-calc(150 0);
+    }
+
+    .skills-content {
+        text-align: center;
+    }
+
+    .skills-list {
+        margin-top: rem-calc(12);
+        text-align: center;
+
+        .skills-item {
+            margin-bottom: rem-calc(30);
+            padding: rem-calc(0 10);
+
+            @include breakpoint(medium) {
+                padding: rem-calc(0 15);
+            }
+
+            @include breakpoint(large) {
+                padding: rem-calc(0 50);
+            }
+
+            p {
+                color: rgba($white, 0.5);
+            }
+        }
+
+        .icon {
+            display: inline-block;
+            margin-bottom: rem-calc(15);
+            color: $accent-2;
+            font-size: rem-calc(50);
+
+            @include breakpoint(medium) {
+                font-size: rem-calc(54);
+            }
+
+        }
+
+        .h5 {
+            margin-bottom: rem-calc(30);
+            line-height: 1.765;
+            color: $white;
+            font-size: rem-calc(18);
+        }
+    }
+}

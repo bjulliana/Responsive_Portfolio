@@ -1,0 +1,40 @@
+
+.section-intro {
+    position: relative;
+    margin-bottom: 1.5rem;
+    text-align: center;
+
+    .section-intro-title {
+        margin-top: 0;
+        line-height: 1.375;
+        color: $white;
+        font-family: $secondary-font;
+        font-size: rem-calc(34);
+
+        @include breakpoint(large) {
+            font-size: rem-calc(48);
+        }
+    }
+
+    .section-intro-top {
+        margin-bottom: rem-calc(12);
+        text-transform: uppercase;
+        line-height: 1.667;
+        letter-spacing: rem-calc(3);
+        color: $accent-1;
+        font-family: $primary-font;
+        font-size: rem-calc(18);
+        font-weight: 700;
+    }
+
+    .lead {
+        line-height: 1.833;
+        font-family: $primary-font;
+        font-size: rem-calc(16);
+        font-weight: 300;
+
+        @include breakpoint(large) {
+            font-size: rem-calc(20);
+        }
+    }
+}

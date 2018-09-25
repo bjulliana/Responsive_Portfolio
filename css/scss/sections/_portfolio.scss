@@ -17,21 +17,15 @@
     }
 
     .bricks-wrapper {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        height: auto;
+        column-count: 1;
+        column-gap: 0;
 
         @include breakpoint(medium) {
-            height: 1855px;
+            column-count: 2;
         }
 
         .brick {
             width: 100%;
-
-            @include breakpoint(medium) {
-                width: 50%;
-            }
         }
     }
 }

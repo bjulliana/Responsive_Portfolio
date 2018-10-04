@@ -2,7 +2,7 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    background: $grey-900 url('#{$img-path}/hero-bg.jpg') no-repeat fixed center 30%;
+    background: set-color('grey-900') url('#{$img-path}/hero-bg.jpg') no-repeat fixed center 30%;
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -23,7 +23,7 @@
         margin: rem-calc(0 0 10 0);
         text-transform: uppercase;
         letter-spacing: rem-calc(3);
-        color: $white;
+        color: set-color('white');
         font-family: $primary-font;
         font-size: rem-calc(15);
         font-weight: 700;
@@ -37,7 +37,7 @@
 .home-content-title {
     margin: rem-calc(15 0 30);
     line-height: 1.133;
-    color: $white;
+    color: set-color('white');
     font-family: $secondary-font;
     font-size: rem-calc(32);
     font-weight: bold;
@@ -81,16 +81,16 @@
 
         a {
             transition: 0.2s ease-in-out;
-            color: $white;
+            color: set-color('white');
 
             &:visited {
-                color: $white;
+                color: set-color('white');
             }
 
             &:hover,
             &:focus,
             &:active {
-                color: $accent-1;
+                color: set-color('accent-1');
             }
 
             .icon {
@@ -120,7 +120,7 @@
         background: transparent;
         text-transform: uppercase;
         letter-spacing: rem-calc(3);
-        color: $white;
+        color: set-color('white');
         font-family: $primary-font;
         font-size: rem-calc(14);
         font-weight: 700;
@@ -128,7 +128,7 @@
         &:hover,
         &:focus,
         &:active {
-            color: $accent-1;
+            color: set-color('accent-1');
         }
 
         .icon {

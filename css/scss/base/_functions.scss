@@ -73,3 +73,8 @@
         @error 'Invalid spacing size "#{$size}"';
     }
 }
+
+//Color Function
+@function set-color($key) {
+    @return map-get($colors-map, $key);
+}

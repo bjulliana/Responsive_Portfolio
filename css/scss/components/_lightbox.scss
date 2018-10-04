@@ -9,7 +9,7 @@
     visibility: hidden;
     opacity: 0;
     z-index: -1;
-    background: rgba($black, 0.85);
+    background: rgba(set-color('black'), 0.85);
     padding-right: 10px;
     padding-left: 10px;
     width: 100%;
@@ -38,11 +38,11 @@
             transition: opacity 0s, transform 0s ease-out;
             opacity: 0;
             z-index: 99;
-            background-color: $accent-1;
+            background-color: set-color('accent-1');
             cursor: pointer;
             padding: rem-calc(20 25);
             line-height: rem-calc(18);
-            color: $white;
+            color: set-color('white');
 
             .icon {
                 font-size: rem-calc(25);

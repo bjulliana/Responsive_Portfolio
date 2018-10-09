@@ -1,6 +1,10 @@
 .contact {
     margin-top: rem-calc(-60);
     background: set-color('grey-900');
-    padding-top: rem-calc(120);
+    padding-top: rem-calc(96);
     padding-bottom: rem-calc(72);
+
+    @include breakpoint(medium) {
+        padding-top: rem-calc(120);
+    }
 }

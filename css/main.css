@@ -664,6 +664,14 @@ hr {
   padding: 0 1.875rem;
   width: 100%;
   max-width: 75rem; }
+  .row.row-reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
 
 .container {
   margin-right: auto;
@@ -927,7 +935,7 @@ select {
     .contact-form .form-field .input-field {
       margin-bottom: 0;
       border: 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
       padding: 2.5rem 0.625rem 0.625rem 0.625rem;
       width: 100%;
       color: rgba(255, 255, 255, 0.7); }
@@ -937,7 +945,7 @@ select {
       .contact-form .form-field .input-field.message {
         margin-bottom: 0;
         border: 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         padding: 2.5rem 0.625rem 0.625rem 0.625rem;
         width: 100%;
         min-height: 12.5rem;
@@ -1334,7 +1342,7 @@ body.js-lightbox-active {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background: #101010 url("/images/cover-bg.jpg") no-repeat fixed center 30%;
+  background: #101010 url("../images/cover-bg.jpg") no-repeat fixed center 30%;
   background-size: cover;
   width: 100%;
   height: 100vh;
@@ -1480,9 +1488,12 @@ body.js-lightbox-active {
 .about {
   position: relative;
   background-color: #ffffff;
-  padding: 6rem 0;
+  padding: 3rem 0;
   min-height: auto;
   text-align: center; }
+  @media screen and (min-width: 600px) {
+    .about {
+      padding: 5rem 0; } }
   @media screen and (min-width: 900px) {
     .about {
       min-height: 636px; } }
@@ -1516,9 +1527,12 @@ body.js-lightbox-active {
 .skills {
   position: relative;
   background-color: #101010;
-  padding: 5rem 0;
+  padding: 3rem 0;
   min-height: 800px;
   color: rgba(255, 255, 255, 0.3); }
+  @media screen and (min-width: 600px) {
+    .skills {
+      padding: 5rem 0; } }
   @media screen and (min-width: 900px) {
     .skills {
       padding: 9.375rem 0; } }
@@ -1558,7 +1572,7 @@ body.js-lightbox-active {
   min-height: 800px; }
   .portfolio .intro-wrap {
     background: #000000;
-    padding: 5rem 0; }
+    padding: 3rem 0 5rem; }
     @media screen and (min-width: 600px) {
       .portfolio .intro-wrap {
         padding: 9.375rem 0; } }
@@ -1664,8 +1678,11 @@ body.js-lightbox-active {
 .contact {
   margin-top: -3.75rem;
   background: #101010;
-  padding-top: 7.5rem;
+  padding-top: 6rem;
   padding-bottom: 4.5rem; }
+  @media screen and (min-width: 600px) {
+    .contact {
+      padding-top: 7.5rem; } }
 
 footer {
   border-top: 1px solid #7e7e7e;

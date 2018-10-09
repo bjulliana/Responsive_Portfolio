@@ -36,7 +36,7 @@ select {
         .input-field {
             margin-bottom: 0;
             border: 0;
-            border-bottom: 1px solid rgba(set-color('white'), 0.1);
+            border-bottom: 1px solid rgba(set-color('white'), 0.3);
             padding: rem-calc(40 10 10 10);
             width: 100%;
             color: rgba(set-color('white'), 0.7);
@@ -49,7 +49,7 @@ select {
             &.message {
                 margin-bottom: 0;
                 border: 0;
-                border-bottom: 1px solid rgba(set-color('white'), 0.1);
+                border-bottom: 1px solid rgba(set-color('white'), 0.3);
                 padding: rem-calc(40 10 10 10);
                 width: 100%;
                 min-height: rem-calc(200);

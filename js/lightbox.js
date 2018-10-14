@@ -5,7 +5,7 @@
         lightbox        = document.querySelector('.lightbox'),
         lightboxContent = lightbox.querySelector('.lightbox-content'),
         lightboxImages  = [],
-        photo           = document.querySelectorAll('.brick-wrap a');
+        photo           = document.querySelectorAll('.block-wrap a');
 
     function showLightbox(src) {
         body.classList.add('js-lightbox-active');

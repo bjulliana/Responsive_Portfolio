@@ -16,7 +16,7 @@
         margin-top: rem-calc(-100);
     }
 
-    .bricks-wrapper {
+    .portfolio-blocks-wrapper {
         column-gap: 0;
         column-count: 1;
 
@@ -24,18 +24,18 @@
             column-count: 2;
         }
 
-        .brick {
+        .block {
             width: 100%;
         }
     }
 }
 
-.brick-wrap {
+.block-wrap {
     position: relative;
     overflow: hidden;
 
     &:hover {
-        .brick-text {
+        .block-text {
             transform: translateX(0);
             visibility: visible;
             opacity: 1;
@@ -83,7 +83,7 @@
         }
     }
 
-    .brick-text {
+    .block-text {
         display: flex;
         position: absolute;
         top: 0;
@@ -100,7 +100,7 @@
         height: 100%;
         text-align: center;
 
-        .brick-title {
+        .block-title {
             margin-top: rem-calc(20);
             line-height: 1.5;
             color: set-color('white');
@@ -112,7 +112,7 @@
             }
         }
 
-        .brick-category {
+        .block-category {
             display: block;
             text-transform: uppercase;
             line-height: rem-calc(15);

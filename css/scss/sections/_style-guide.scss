@@ -60,15 +60,6 @@
     // Recursive check
     $color: if(map-has-key($palette, $base), color($base), $base);
 
-    // Adjustments - Darken and Desaturate
-    @each $function, $value in $adjust {
-        @if function-exists($function) {
-            $color: call($function, $color, $value...);
-        } @else {
-            @warn '#{$function} is not a valid color function.';
-        }
-    }
-
     @return $color;
 }
 

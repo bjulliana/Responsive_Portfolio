@@ -13,11 +13,11 @@ html {
 
 body {
     margin: 0;
-    background-color: $off-white;
+    background-color: set-color('off-white');
     padding: 0;
     text-rendering: optimizeLegibility;
     line-height: rem-calc(30);
-    color: $grey-700;
+    color: set-color('grey-700');
     font-family: $secondary-font;
     font-size: rem-calc(16);
     font-weight: 200;
@@ -41,14 +41,6 @@ img {
     display: none;
 }
 
-.row.full-width {
-    width: 100%;
-}
-
-.row.narrow {
-    max-width: 800px;
-}
-
 .text-center {
     text-align: center;
 }
@@ -59,6 +51,10 @@ img {
 
 .text-right {
     text-align: right;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
 }
 
 .align-center {
@@ -78,7 +74,7 @@ img {
 hr {
     margin-bottom: rem-calc(50);
     border-width: 1px 0 0;
-    border-color: rgba($white, 0.2);
+    border-color: rgba(set-color('white'), 0.2);
     width: rem-calc(200);
-    color: $grey-500;
+    color: set-color('grey-500');
 }

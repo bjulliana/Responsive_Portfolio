@@ -9,21 +9,21 @@
 
     a {
         transition: 0.3s ease-in-out;
-        background: $accent-1;
+        background: set-color('accent-1');
         width: rem-calc(70);
         height: rem-calc(70);
         text-align: center;
         text-transform: uppercase;
         text-decoration: none;
         line-height: rem-calc(66);
-        color: $white;
+        color: set-color('white');
 
         @include breakpoint(medium) {
             display: block;
         }
 
         &:hover .icon {
-            color: $black;
+            color: set-color('black');
         }
 
         .icon {

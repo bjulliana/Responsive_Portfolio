@@ -2,7 +2,7 @@
 	"name": "responsive_portfolio",
 	"version": "1.0.0",
 	"description": "Portfolio Website",
-	"main": "main.js",
+	"main": "js/main.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"gulp": "gulp"

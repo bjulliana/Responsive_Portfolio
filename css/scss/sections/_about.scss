@@ -1,9 +1,13 @@
 .about {
     position: relative;
-    background-color: $white;
-    padding: rem-calc(96 0);
+    background-color: set-color('white');
+    padding: rem-calc(48 0);
     min-height: auto;
     text-align: center;
+
+    @include breakpoint(medium) {
+        padding: rem-calc(80 0);
+    }
 
     @include breakpoint(large) {
         min-height: 636px;
@@ -15,13 +19,13 @@
     }
 
     span {
-        color: $accent-1;
+        color: set-color('accent-1');
     }
 
     .lead {
         margin-top: rem-calc(30);
         line-height: 1.8;
-        color: $grey-500;
+        color: set-color('grey-500');
         font-family: $secondary-font;
         font-size: rem-calc(25);
         font-weight: 700;

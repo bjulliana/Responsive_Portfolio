@@ -23,6 +23,7 @@ gulp.task('sass', function () {
 gulp.task('browserSync', function () {
     return browserSync.init({
         startPath: './',
+        port     : 8000,
         server   : {
             baseDir: './'
         }

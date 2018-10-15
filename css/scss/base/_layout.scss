@@ -15,7 +15,7 @@ $breakpoints-map: map-keys($breakpoints);
         @if $breakpoint == 'small' {
             display: block;
 
-            @include breakpoint('medium') {
+            @include breakpoint(medium) {
                 display: none;
             }
 
@@ -63,7 +63,7 @@ $spacing-map: (
         padding-top: get-spacing($size-label, 'sm');
         padding-bottom: get-spacing($size-label, 'sm');
 
-        @include breakpoint('large') {
+        @include breakpoint(large) {
             padding-top: get-spacing($size-label, 'md');
             padding-bottom: get-spacing($size-label, 'md');
         }
@@ -72,7 +72,7 @@ $spacing-map: (
     .margin-b-#{$size-label} {
         margin-bottom: get-spacing($size-label, 'sm');
 
-        @include breakpoint('large') {
+        @include breakpoint(large) {
             margin-bottom: get-spacing($size-label, 'md');
         }
     }
@@ -94,14 +94,6 @@ $spacing-map: (
         flex-direction: column;
         align-items: center;
     }
-}
-
-.container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: rem-calc(20);
-    padding-left: rem-calc(20);
-    max-width: rem-calc(1600);
 }
 
 .hide-for-small.hide-for-small {

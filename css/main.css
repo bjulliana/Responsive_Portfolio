@@ -670,13 +670,6 @@ hr {
     -ms-flex-align: center;
     align-items: center; }
 
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 1.25rem;
-  padding-left: 1.25rem;
-  max-width: 100rem; }
-
 .hide-for-small.hide-for-small {
   display: none; }
   @media screen and (min-width: 600px) {

@@ -7,4 +7,8 @@
     @include breakpoint(medium) {
         padding-top: rem-calc(120);
     }
+
+    #reach-out {
+        color: set-color('accent-1');
+    }
 }
